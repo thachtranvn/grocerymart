@@ -1,0 +1,160 @@
+@use "../abstracts";
+
+%flexItemCenter {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 54px;
+
+  width: min(1240px, 100%);
+  display: none;
+
+  &__inner {
+    --inner-padding: 30px;
+
+    position: relative;
+    padding: var(--inner-padding);
+
+    border-radius: 20px;
+    background: var(--dropdown-bg-color);
+    box-shadow: var(--dropdown-shadow);
+
+    &::before {
+      content: url("../icons/dropdown-arrow.svg");
+      position: absolute;
+      left: var(--arrow-left-pos);
+      top: -13px;
+      translate: -50%;
+      filter: var(--dropdown-arrow-color);
+    }
+  }
+}
+
+// Menu Details
+.menu {
+  --main-menu-column-width: 280px;
+
+  position: relative;
+
+  &__main {
+    width: var(--main-menu-column-width);
+    padding-right: 2px;
+    border-right: 1px solid var(--border-color);
+    height: calc(min(582px, 100vh - 150px) - var(--inner-padding) * 2);
+    overflow-y: auto;
+  }
+
+  &__head {
+    @extend %flexItemCenter;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    position: relative;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+
+    @include abstracts.breakpoint(xl) {
+      display: none;
+    }
+  }
+
+  &__img--2 {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+
+  &__img--2 {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    bottom: 0;
+    right: 0;
+    filter: var(--menu-icon-color);
+  }
+
+  &__title {
+    flex: 1;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__list {
+    margin-left: 50px;
+    flex: 1;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include abstracts.breakpoint(xl) {
+      margin-left: 0;
+    }
+  }
+
+  &__item:last-child > &__link {
+    padding-bottom: 0;
+  }
+
+  &__item:first-child > &__link {
+    padding-top: 0;
+  }
+
+  &__item {
+    &--active .sub-menu {
+      display: grid;
+    }
+  }
+
+  &__item--active > &__link,
+  &__item:hover > &__link {
+    color: #0071dc;
+    font-weight: 500;
+  }
+
+  // Gộp hover của item và link
+  // &__item {
+  //   &:hover .sub-menu {
+  //     display: grid;
+  //   }
+
+  //   &:hover > &__link {
+  //     color: #0071dc;
+  //     font-weight: 500;
+  //   }
+  // }
+
+  &__link {
+    display: block;
+    padding: 7px 0;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+}
+
+// Sub Menu
+
+.sub-menu {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 16px;
+
+  position: absolute;
+  inset: 0 0 0 var(--main-menu-column-width);
+  padding-left: var(--inner-padding);
+
+  overflow-y: auto;
+
+  &__group + &__group {
+    margin-top: var(--inner-padding);
+  }
+}
