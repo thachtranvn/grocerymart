@@ -1237,13 +1237,14 @@ html {
 
 .menu {
   --main-menu-column-width: 280px;
+  --max-inner-height: calc(min(582px, 100vh - 150px) - var(--inner-padding) * 2);
   position: relative;
 }
 .menu__main {
   width: var(--main-menu-column-width);
   padding-right: 2px;
   border-right: 1px solid var(--border-color);
-  height: calc(min(582px, 100vh - 150px) - var(--inner-padding) * 2);
+  height: var(--max-inner-height);
   overflow-y: auto;
 }
 .menu__head {
@@ -1324,6 +1325,14 @@ html {
 }
 .sub-menu__group + .sub-menu__group {
   margin-top: var(--inner-padding);
+}
+.sub-menu--not-main {
+  display: grid;
+  position: initial;
+  padding-left: 0;
+  inset: initial;
+  grid-template-columns: repeat(4, 1fr);
+  height: var(--max-inner-height);
 }
 
 /*# sourceMappingURL=main.css.map */
