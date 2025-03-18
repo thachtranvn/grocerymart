@@ -9,9 +9,14 @@
   position: absolute;
   left: 0;
   padding-top: 54px;
-
   width: min(1240px, 100%);
   display: none;
+
+  @include abstracts.breakpoint(lg) {
+    position: initial;
+    padding-top: 0;
+    width: 100%;
+  }
 
   &__inner {
     --inner-padding: 30px;
@@ -31,6 +36,17 @@
       translate: -50%;
       filter: var(--dropdown-arrow-color);
     }
+
+    @include abstracts.breakpoint(lg) {
+      position: initial;
+      padding: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      &::before {
+        display: none;
+      }
+    }
   }
 }
 
@@ -47,6 +63,13 @@
     border-right: 1px solid var(--border-color);
     height: var(--max-inner-height);
     overflow-y: auto;
+
+    @include abstracts.breakpoint(lg) {
+      width: 100%;
+      height: auto;
+      border-right: none;
+      padding-right: 0;
+    }
   }
 
   &__head {
@@ -63,6 +86,10 @@
 
     @include abstracts.breakpoint(xl) {
       display: none;
+    }
+
+    @include abstracts.breakpoint(lg) {
+      display: block;
     }
   }
 
@@ -98,6 +125,10 @@
     @include abstracts.breakpoint(xl) {
       margin-left: 0;
     }
+
+    @include abstracts.breakpoint(lg) {
+      padding-left: 0;
+    }
   }
 
   &__item:last-child > &__link {
@@ -119,18 +150,6 @@
     color: #0071dc;
     font-weight: 500;
   }
-
-  // Gộp hover của item và link
-  // &__item {
-  //   &:hover .sub-menu {
-  //     display: grid;
-  //   }
-
-  //   &:hover > &__link {
-  //     color: #0071dc;
-  //     font-weight: 500;
-  //   }
-  // }
 
   &__link {
     display: block;
@@ -159,6 +178,18 @@
     margin-top: var(--inner-padding);
   }
 
+  @include abstracts.breakpoint(lg) {
+    position: initial;
+    grid-template-columns: 1fr;
+    inset: 0;
+    padding: 7px 0;
+    gap: 30px;
+
+    &__group > .menu__list {
+      padding-left: 50px;
+    }
+  }
+
   &--not-main {
     display: grid;
     position: initial;
@@ -166,5 +197,10 @@
     inset: initial;
     grid-template-columns: repeat(4, 1fr);
     height: var(--max-inner-height);
+
+    @include abstracts.breakpoint(lg) {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
   }
 }

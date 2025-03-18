@@ -159,6 +159,7 @@ button {
   outline: none;
   border: none;
   background: transparent;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -1007,6 +1008,92 @@ select {
     --grid-gutter-y: 90px;
   }
 }
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media (max-width: 1399.98px) {
+  .d-xxl-block {
+    display: block !important;
+  }
+  .d-xxl-flex {
+    display: flex !important;
+  }
+  .d-xxl-grid {
+    display: grid !important;
+  }
+  .d-xxl-none {
+    display: none !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .d-xl-block {
+    display: block !important;
+  }
+  .d-xl-flex {
+    display: flex !important;
+  }
+  .d-xl-grid {
+    display: grid !important;
+  }
+  .d-xl-none {
+    display: none !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-lg-flex {
+    display: flex !important;
+  }
+  .d-lg-grid {
+    display: grid !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .d-md-block {
+    display: block !important;
+  }
+  .d-md-flex {
+    display: flex !important;
+  }
+  .d-md-grid {
+    display: grid !important;
+  }
+  .d-md-none {
+    display: none !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .d-sm-block {
+    display: block !important;
+  }
+  .d-sm-flex {
+    display: flex !important;
+  }
+  .d-sm-grid {
+    display: grid !important;
+  }
+  .d-sm-none {
+    display: none !important;
+  }
+}
 html.dark {
   --bg-color: #292e39;
   --text-color: #fff;
@@ -1073,20 +1160,35 @@ html {
     padding: 16px 0;
   }
 }
-.top-bar__menu {
-  display: none;
-}
-@media (max-width: 991.98px) {
-  .top-bar__menu {
-    display: block;
-  }
-}
 .top-bar__menu--icon {
   width: 24px;
 }
 
 .navbar {
   margin-left: 129px;
+}
+.navbar__close-btn {
+  display: none;
+  padding: 13px 26px 13px 0;
+  line-height: 0;
+}
+@media (max-width: 991.98px) {
+  .navbar__close-btn {
+    display: block;
+  }
+}
+.navbar__overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+@media (max-width: 991.98px) {
+  .navbar__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+  }
 }
 @media (max-width: 1199.98px) {
   .navbar {
@@ -1095,7 +1197,24 @@ html {
 }
 @media (max-width: 991.98px) {
   .navbar {
-    display: none;
+    position: fixed;
+    background-color: #fff;
+    inset: 0 50% 0 0;
+    margin-left: 0;
+    padding: 20px 32px;
+    z-index: 9;
+    translate: -100%;
+    transition: translate 0.3s;
+  }
+  .navbar.show {
+    visibility: visible;
+    opacity: 1;
+    translate: 0;
+  }
+  .navbar.show ~ .navbar__overlay {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
   }
 }
 .navbar__list {
@@ -1103,22 +1222,49 @@ html {
   font-weight: 500;
   line-height: 146.667%;
 }
+@media (max-width: 991.98px) {
+  .navbar__list {
+    flex-direction: column;
+    align-items: flex-start;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+}
+.navbar__arrow {
+  transition: rotate 0.3s;
+}
 .navbar__item {
   padding: 0 15px;
 }
 .navbar__item:hover .dropdown {
   display: block;
 }
-.navbar__item:hover .icon {
-  transform: rotate(-180deg);
-  transition: transform 0.3s ease;
+.navbar__item:hover .navbar__arrow {
+  rotate: -90deg;
 }
-.navbar .icon {
-  transition: transform 0.3s ease;
+@media (max-width: 991.98px) {
+  .navbar__item {
+    padding: 0;
+    width: 100%;
+  }
+  .navbar__item:hover .dropdown {
+    display: none;
+  }
+  .navbar__item--active .dropdown {
+    display: block !important;
+  }
+  .navbar__item--active .navbar__arrow {
+    rotate: -90deg;
+  }
 }
 .navbar__link {
   gap: 6px;
   height: 50px;
+}
+@media (max-width: 991.98px) {
+  .navbar__link {
+    justify-content: space-between;
+  }
 }
 
 .top-act {
@@ -1136,16 +1282,6 @@ html {
   height: 50px;
   border-radius: 8px;
   box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow-color);
-}
-@media (max-width: 767.98px) {
-  .top-act__group {
-    display: none;
-  }
-}
-@media (max-width: 991.98px) {
-  .top-act__group--single {
-    display: none;
-  }
 }
 .top-act__group--single .top-act__btn {
   padding: 13px;
@@ -1218,6 +1354,13 @@ html {
   width: min(1240px, 100%);
   display: none;
 }
+@media (max-width: 991.98px) {
+  .dropdown {
+    position: initial;
+    padding-top: 0;
+    width: 100%;
+  }
+}
 .dropdown__inner {
   --inner-padding: 30px;
   position: relative;
@@ -1234,6 +1377,18 @@ html {
   translate: -50%;
   filter: var(--dropdown-arrow-color);
 }
+@media (max-width: 991.98px) {
+  .dropdown__inner {
+    position: initial;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+  }
+  .dropdown__inner::before {
+    display: none;
+  }
+}
 
 .menu {
   --main-menu-column-width: 280px;
@@ -1246,6 +1401,14 @@ html {
   border-right: 1px solid var(--border-color);
   height: var(--max-inner-height);
   overflow-y: auto;
+}
+@media (max-width: 991.98px) {
+  .menu__main {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    padding-right: 0;
+  }
 }
 .menu__head {
   gap: 14px;
@@ -1260,6 +1423,11 @@ html {
 @media (max-width: 1199.98px) {
   .menu__img {
     display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .menu__img {
+    display: block;
   }
 }
 .menu__img--2 {
@@ -1291,6 +1459,11 @@ html {
 @media (max-width: 1199.98px) {
   .menu__list {
     margin-left: 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .menu__list {
+    padding-left: 0;
   }
 }
 .menu__item:last-child > .menu__link {
@@ -1326,6 +1499,18 @@ html {
 .sub-menu__group + .sub-menu__group {
   margin-top: var(--inner-padding);
 }
+@media (max-width: 991.98px) {
+  .sub-menu {
+    position: initial;
+    grid-template-columns: 1fr;
+    inset: 0;
+    padding: 7px 0;
+    gap: 30px;
+  }
+  .sub-menu__group > .menu__list {
+    padding-left: 50px;
+  }
+}
 .sub-menu--not-main {
   display: grid;
   position: initial;
@@ -1333,6 +1518,12 @@ html {
   inset: initial;
   grid-template-columns: repeat(4, 1fr);
   height: var(--max-inner-height);
+}
+@media (max-width: 991.98px) {
+  .sub-menu--not-main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

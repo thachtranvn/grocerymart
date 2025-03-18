@@ -24,14 +24,6 @@
     padding: 16px 0;
   }
 
-  &__menu {
-    display: none;
-
-    @include abstracts.breakpoint(lg) {
-      display: block;
-    }
-  }
-
   &__menu--icon {
     width: 24px;
   }
@@ -40,12 +32,54 @@
 .navbar {
   margin-left: 129px;
 
+  &__close-btn {
+    display: none;
+    padding: 13px 26px 13px 0;
+    line-height: 0;
+
+    @include abstracts.breakpoint(lg) {
+      display: block;
+    }
+  }
+
+  &__overlay {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+    @include abstracts.breakpoint(lg) {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      inset: 0;
+      z-index: 8;
+    }
+  }
+
   @include abstracts.breakpoint(xl) {
     margin-left: 50px;
   }
 
   @include abstracts.breakpoint(lg) {
-    display: none;
+    position: fixed;
+    background-color: #fff;
+    inset: 0 50% 0 0;
+    margin-left: 0;
+    padding: 20px 32px;
+    z-index: 9;
+    translate: -100%;
+    transition: translate 0.3s;
+
+    &.show {
+      visibility: visible;
+      opacity: 1;
+      translate: 0;
+    }
+
+    &.show ~ .navbar__overlay {
+      visibility: visible;
+      opacity: 1;
+      transition: 0.5s;
+    }
   }
 
   &__list {
@@ -53,6 +87,17 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 146.667%;
+
+    @include abstracts.breakpoint(lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+  }
+
+  &__arrow {
+    transition: rotate 0.3s;
   }
 
   &__item {
@@ -62,20 +107,36 @@
       display: block;
     }
 
-    &:hover .icon {
-      transform: rotate(-180deg);
-      transition: transform 0.3s ease;
+    &:hover .navbar__arrow {
+      rotate: -90deg;
     }
-  }
 
-  .icon {
-    transition: transform 0.3s ease;
+    @include abstracts.breakpoint(lg) {
+      padding: 0;
+      width: 100%;
+
+      &:hover .dropdown {
+        display: none;
+      }
+
+      &--active .dropdown {
+        display: block !important;
+      }
+
+      &--active .navbar__arrow {
+        rotate: -90deg;
+      }
+    }
   }
 
   &__link {
     @extend %flexItemCenter;
     gap: 6px;
     height: 50px;
+
+    @include abstracts.breakpoint(lg) {
+      justify-content: space-between;
+    }
   }
 }
 
@@ -95,16 +156,6 @@
     height: 50px;
     border-radius: 8px;
     box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow-color);
-
-    @include abstracts.breakpoint(md) {
-      display: none;
-    }
-  }
-
-  &__group--single {
-    @include abstracts.breakpoint(lg) {
-      display: none;
-    }
   }
 
   &__group--single &__btn {
