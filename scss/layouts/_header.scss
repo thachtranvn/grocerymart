@@ -40,6 +40,34 @@
     @include abstracts.breakpoint(lg) {
       display: block;
     }
+
+    @include abstracts.breakpoint(md) {
+      padding: 10px 26px 10px 0;
+    }
+  }
+
+  &__btn {
+    align-items: center;
+    height: 50px;
+
+    &--title,
+    &--qty {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 146.667%;
+    }
+
+    &--title {
+      padding-left: 15px;
+    }
+
+    &--qty {
+      margin-left: auto;
+    }
+
+    @include abstracts.breakpoint(md) {
+      height: 44px;
+    }
   }
 
   &__overlay {
@@ -61,18 +89,20 @@
 
   @include abstracts.breakpoint(lg) {
     position: fixed;
-    background-color: #fff;
+    background-color: var(--sidebar-bg-color);
     inset: 0 50% 0 0;
     margin-left: 0;
     padding: 20px 32px;
     z-index: 9;
     translate: -100%;
     transition: translate 0.3s;
+    border-radius: 0 20px 20px 0;
 
     &.show {
       visibility: visible;
       opacity: 1;
       translate: 0;
+      box-shadow: var(--sidebar-shadow);
     }
 
     &.show ~ .navbar__overlay {
@@ -80,6 +110,11 @@
       opacity: 1;
       transition: 0.5s;
     }
+  }
+
+  @include abstracts.breakpoint(md) {
+    inset: 0 20% 0 0;
+    padding: 12px 24px;
   }
 
   &__list {
@@ -91,8 +126,13 @@
     @include abstracts.breakpoint(lg) {
       flex-direction: column;
       align-items: flex-start;
-      height: calc(100vh - 80px);
+      height: calc(100vh - 90px);
       overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    @include abstracts.breakpoint(md) {
+      height: calc(100vh - 160px);
     }
   }
 
@@ -114,6 +154,7 @@
     @include abstracts.breakpoint(lg) {
       padding: 0;
       width: 100%;
+      rotate: 0deg;
 
       &:hover .dropdown {
         display: none;
@@ -136,6 +177,10 @@
 
     @include abstracts.breakpoint(lg) {
       justify-content: space-between;
+    }
+
+    @include abstracts.breakpoint(md) {
+      height: 44px;
     }
   }
 }

@@ -56,6 +56,9 @@
   --max-inner-height: calc(min(582px, 100vh - 150px) - var(--inner-padding) * 2);
 
   position: relative;
+  @include abstracts.breakpoint(lg) {
+    padding: 12px 0px;
+  }
 
   &__main {
     width: var(--main-menu-column-width);

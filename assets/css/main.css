@@ -1097,8 +1097,8 @@ select {
 html.dark {
   --bg-color: #292e39;
   --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(94%) sepia(94%)
-    saturate(14%) hue-rotate(314deg) brightness(104%) contrast(100%);
+  --icon-color: brightness(0) saturate(100%) invert(94%) sepia(94%) saturate(14%) hue-rotate(314deg) brightness(104%)
+    contrast(100%);
   --header-bg-color: #171c28;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow-color: rgba(0, 0, 0, 0.2);
@@ -1107,18 +1107,20 @@ html.dark {
   --separate-color: #ededf6;
   --dropdown-bg-color: #303644;
   --dropdown-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(20%) sepia(15%)
-    saturate(701%) hue-rotate(184deg) brightness(93%) contrast(94%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(20%) sepia(15%) saturate(701%) hue-rotate(184deg)
+    brightness(93%) contrast(94%);
   --border-color: #171c28;
-  --menu-icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
-    saturate(0%) hue-rotate(100deg) brightness(103%) contrast(101%);
+  --menu-icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg)
+    brightness(103%) contrast(101%);
+  --sidebar-bg-color: #303644;
+  --sidebar-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
 }
 
 html {
   --bg-color: #f6f6f6;
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(6%) sepia(82%)
-    saturate(794%) hue-rotate(218deg) brightness(95%) contrast(95%);
+  --icon-color: brightness(0) saturate(100%) invert(6%) sepia(82%) saturate(794%) hue-rotate(218deg) brightness(95%)
+    contrast(95%);
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow-color: rgba(237, 237, 246, 0.2);
@@ -1128,6 +1130,8 @@ html {
   --dropdown-bg-color: #fff;
   --dropdown-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
   --border-color: #d2d1d6;
+  --sidebar-bg-color: #fff;
+  --sidebar-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
 }
 @media (max-width: 767.98px) {
   html {
@@ -1177,6 +1181,31 @@ html {
     display: block;
   }
 }
+@media (max-width: 767.98px) {
+  .navbar__close-btn {
+    padding: 10px 26px 10px 0;
+  }
+}
+.navbar__btn {
+  align-items: center;
+  height: 50px;
+}
+.navbar__btn--title, .navbar__btn--qty {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.navbar__btn--title {
+  padding-left: 15px;
+}
+.navbar__btn--qty {
+  margin-left: auto;
+}
+@media (max-width: 767.98px) {
+  .navbar__btn {
+    height: 44px;
+  }
+}
 .navbar__overlay {
   visibility: hidden;
   opacity: 0;
@@ -1198,23 +1227,31 @@ html {
 @media (max-width: 991.98px) {
   .navbar {
     position: fixed;
-    background-color: #fff;
+    background-color: var(--sidebar-bg-color);
     inset: 0 50% 0 0;
     margin-left: 0;
     padding: 20px 32px;
     z-index: 9;
     translate: -100%;
     transition: translate 0.3s;
+    border-radius: 0 20px 20px 0;
   }
   .navbar.show {
     visibility: visible;
     opacity: 1;
     translate: 0;
+    box-shadow: var(--sidebar-shadow);
   }
   .navbar.show ~ .navbar__overlay {
     visibility: visible;
     opacity: 1;
     transition: 0.5s;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar {
+    inset: 0 20% 0 0;
+    padding: 12px 24px;
   }
 }
 .navbar__list {
@@ -1226,8 +1263,14 @@ html {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 90px);
     overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__list {
+    height: calc(100vh - 160px);
   }
 }
 .navbar__arrow {
@@ -1246,6 +1289,7 @@ html {
   .navbar__item {
     padding: 0;
     width: 100%;
+    rotate: 0deg;
   }
   .navbar__item:hover .dropdown {
     display: none;
@@ -1264,6 +1308,11 @@ html {
 @media (max-width: 991.98px) {
   .navbar__link {
     justify-content: space-between;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__link {
+    height: 44px;
   }
 }
 
@@ -1394,6 +1443,11 @@ html {
   --main-menu-column-width: 280px;
   --max-inner-height: calc(min(582px, 100vh - 150px) - var(--inner-padding) * 2);
   position: relative;
+}
+@media (max-width: 991.98px) {
+  .menu {
+    padding: 12px 0px;
+  }
 }
 .menu__main {
   width: var(--main-menu-column-width);
