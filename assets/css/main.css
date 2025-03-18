@@ -1152,6 +1152,7 @@ html {
 .top-bar {
   position: relative;
   padding: 30px 0;
+  z-index: 1;
 }
 @media (max-width: 991.98px) {
   .top-bar {
@@ -1578,6 +1579,118 @@ html {
     grid-template-columns: 1fr;
     height: auto;
   }
+}
+
+.slide {
+  position: relative;
+  margin: 40px 0;
+}
+@media (max-width: 767.98px) {
+  .slide {
+    margin: 30px 0;
+  }
+}
+.slide__inner {
+  display: flex;
+  overflow: hidden;
+}
+.slide__item {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  padding-top: 34%;
+}
+@media (max-width: 767.98px) {
+  .slide__item {
+    padding-top: 50%;
+  }
+}
+.slide__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+@media (max-width: 991.98px) {
+  .slide__img {
+    border-radius: 10px;
+  }
+}
+.slide__pagination {
+  --pagination-color: #fff;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 5.2%;
+  bottom: 15%;
+  width: 20%;
+  column-gap: 24px;
+}
+@media (max-width: 991.98px) {
+  .slide__pagination {
+    width: 25%;
+  }
+}
+@media (max-width: 767.98px) {
+  .slide__pagination {
+    left: 5.7%;
+    width: 30%;
+  }
+}
+@media (max-width: 767.98px) {
+  .slide__pagination {
+    width: 35%;
+  }
+}
+.slide__num {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+  color: var(--pagination-color);
+}
+@media (max-width: 767.98px) {
+  .slide__num {
+    font-size: 1.4rem;
+  }
+}
+.slide__slider {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: var(--pagination-color);
+  translate: 0 -35%;
+}
+@media (max-width: 767.98px) {
+  .slide__slider {
+    height: 3px;
+  }
+}
+.slide__slider::after, .slide__slider::before {
+  content: "";
+  position: absolute;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border: 4px solid var(--pagination-color);
+  border-radius: 50%;
+  top: 50%;
+  translate: 0 -50%;
+}
+@media (max-width: 767.98px) {
+  .slide__slider::after, .slide__slider::before {
+    border-width: 3px;
+  }
+}
+.slide__slider::before {
+  left: 0;
+  translate: -90% -50%;
+}
+.slide__slider::after {
+  right: 0;
+  translate: 90% -50%;
 }
 
 /*# sourceMappingURL=main.css.map */
