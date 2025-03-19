@@ -14,6 +14,10 @@
     font-weight: 700;
     line-height: 141.667%;
     margin-bottom: 20px;
+
+    @include abstracts.screen(md) {
+      font-size: 2.2rem;
+    }
   }
 
   &__cate {
