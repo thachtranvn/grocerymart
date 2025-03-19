@@ -12,7 +12,7 @@ html {
   --header-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
   --separate-color: #ededf6;
 
-  @include abstracts.breakpoint(md) {
+  @include abstracts.screen(md) {
     --header-bg-color: #fff;
   }
 
@@ -24,4 +24,12 @@ html {
   // Sidebar
   --sidebar-bg-color: #fff;
   --sidebar-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+
+  // Home Categories
+  --cate-item-bg-color: #eee;
+  --cate-item-thumb-bg-color: #fff;
+
+  @include abstracts.screen(md) {
+    --cate-item-bg-color: #fff;
+  }
 }

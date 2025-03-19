@@ -31,24 +31,68 @@
 
     <div class="container">
       <!-- Slides -->
-      <div class="slide">
-        <div class="slide__inner">
-          <div class="slide__item">
-            <a href="#!" class="slide__link">
-              <picture>
-                <source media="(max-width: 767.98px)" srcset="./assets/img/slide/slide-01-md.png" />
-                <img class="slide__img" src="./assets/img/slide/slide-01.png" alt="" />
-              </picture>
-            </a>
+      <section class="home__container">
+        <div class="slide">
+          <div class="slide__inner">
+            <div class="slide__item">
+              <a href="#!" class="slide__link">
+                <picture>
+                  <source media="(max-width: 767.98px)" srcset="./assets/img/slide/slide-01-md.png" />
+                  <img class="slide__img" src="./assets/img/slide/slide-01.png" alt="" />
+                </picture>
+              </a>
+            </div>
+          </div>
+
+          <div class="slide__pagination">
+            <span class="slide__num">1</span>
+            <span class="slide__slider"></span>
+            <span class="slide__num">5</span>
           </div>
         </div>
+      </section>
 
-        <div class="slide__pagination">
-          <span class="slide__num">1</span>
-          <span class="slide__slider"></span>
-          <span class="slide__num">5</span>
+      <!-- Browse Categories -->
+      <section class="home__container">
+        <h2 class="home__heading">Browse Categories</h2>
+        <div class="home__cate row row-cols-3 row-cols-md-1">
+          <!-- Category Item 1 -->
+          <div class="col">
+            <article class="cate-item">
+              <img src="./assets/img/products/home-cate-01.png" alt="" class="cate-item__thumb" />
+              <section class="cate-item__info">
+                <h3 class="cate-item__title">$24 - $150</h3>
+                <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
+              </section>
+            </article>
+          </div>
+          <!-- Category Item 2 -->
+          <div class="col">
+            <article class="cate-item">
+              <img src="./assets/img/products/home-cate-02.png" alt="" class="cate-item__thumb" />
+              <section class="cate-item__info">
+                <h3 class="cate-item__title">$37 - $160</h3>
+                <p class="cate-item__desc">Espresso arabica and robusta beans</p>
+              </section>
+            </article>
+          </div>
+          <!-- Category Item 3 -->
+          <div class="col">
+            <article class="cate-item">
+              <img src="./assets/img/products/home-cate-03.png" alt="" class="cate-item__thumb" />
+              <section class="cate-item__info">
+                <h3 class="cate-item__title">$32 - $160</h3>
+                <p class="cate-item__desc">Lavazza top class whole bean coffee blend</p>
+              </section>
+            </article>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Browse Products -->
+      <section class="home__container">
+        <h2 class="home__heading">Total LavAzza 1320</h2>
+      </section>
 
       <!-- Footer -->
       <footer id="footer" class="footer"></footer>
