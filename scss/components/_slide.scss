@@ -82,10 +82,11 @@
     height: 4px;
     background-color: var(--pagination-color);
 
-    translate: 0 -35%;
+    translate: 0 -15%;
 
     @include abstracts.screen(md) {
       height: 3px;
+      translate: 0 -10%;
     }
 
     &::after,
