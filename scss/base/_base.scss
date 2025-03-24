@@ -44,6 +44,10 @@ input {
   background: transparent;
   padding: 0;
   cursor: text;
+
+  @include abstracts.screen(md) {
+    font-size: 1.6rem;
+  }
 }
 
 .icon {
