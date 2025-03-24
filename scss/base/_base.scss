@@ -22,6 +22,14 @@ a {
   color: inherit;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+}
+
 button {
   outline: none;
   border: none;
@@ -30,12 +38,12 @@ button {
   cursor: pointer;
 }
 
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
-  color: inherit;
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: text;
 }
 
 .icon {

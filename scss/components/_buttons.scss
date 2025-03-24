@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 // Filter Button
 
 .filter-btn {
@@ -12,7 +14,6 @@
 
   font-size: 1.4rem;
   font-weight: 700;
-  //   line-height: 142.857%;
 }
 
 .like-btn {
@@ -37,5 +38,105 @@
 
   &__icon--liked {
     margin-top: 7px;
+  }
+}
+
+// Buttons
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 600;
+  height: 38px;
+  padding: 0 20px;
+  border-radius: 6px;
+  user-select: none;
+
+  border: 1px solid #d2d1d6;
+
+  & + & {
+    margin-left: 16px;
+  }
+
+  &-text {
+    padding: 0 2px;
+    border: none;
+    transition: translate 0.3s;
+
+    &--disabled {
+      color: #d2d1d6;
+      pointer-events: none;
+      border: none;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      translate: 0 -2px;
+    }
+  }
+
+  &-outline {
+    border: 1px solid #d2d1d6;
+    transition: translate 0.3s;
+
+    &--disabled {
+      border: 1px solid #ededf6;
+      color: #d2d1d6;
+      pointer-events: none;
+    }
+
+    &:hover {
+      background: #f6f6f6;
+      box-shadow: 0px 5px 10px 0px rgba(83, 129, 180, 0.1);
+      translate: 0 -2px;
+    }
+  }
+
+  &-primary {
+    background-color: #ffb700;
+    color: var(--primary-button-text-color);
+    border: none;
+    transition: translate 0.3s;
+
+    &--disabled {
+      color: #d2d1d6;
+      background-color: #f6f6f6;
+      pointer-events: none;
+      border: none;
+    }
+
+    &:hover {
+      background: #ffc533;
+      box-shadow: 0px 5px 10px 0px rgba(255, 197, 51, 0.4);
+      translate: 0 -2px;
+    }
+  }
+
+  &-sm {
+    height: 38px;
+    @include abstracts.screen(sm) {
+      height: 44px;
+    }
+  }
+
+  &-md {
+    height: 44px;
+    border-radius: 8px;
+  }
+  &-lg {
+    height: 50px;
+    border-radius: 8px;
+  }
+  &-xl {
+    height: 68px;
+    border-radius: 10px;
+  }
+
+  &-rounded {
+    border-radius: 99px;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
   }
 }
