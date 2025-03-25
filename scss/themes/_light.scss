@@ -52,4 +52,23 @@ html {
 
   --like-btn-color: #fff;
   --like-btn-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+
+  // Footer
+  --footer-bg-color: var(--header-bg-color);
+
+  --footer-heading-text-color: #5e6b81;
+  --footer-input-border-color: #d2d1d6;
+  --footer-input-placeholder-color: #9e9da8;
+
+  @include abstracts.screen(lg) {
+    --footer-bg-color: #fff;
+  }
+
+  --footer-social-bg-color: #f5f5f7;
+  --footer-social-icon-color: brightness(0) saturate(100%) invert(83%) sepia(6%) saturate(281%) hue-rotate(184deg)
+    brightness(93%) contrast(92%);
+  --footer-social-icon-color-hover: brightness(0) saturate(100%) invert(32%) sepia(5%) saturate(1416%)
+    hue-rotate(183deg) brightness(100%) contrast(99%);
+
+  --footer-copyright: #9e9da8;
 }

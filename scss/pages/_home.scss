@@ -7,6 +7,10 @@
     @include abstracts.screen(md) {
       margin-top: 30px;
     }
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
   }
 
   &__heading {

@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 html.dark {
   --bg-color: #292e39;
   --text-color: #fff;
@@ -46,4 +48,16 @@ html.dark {
 
   --like-btn-color: #292e39;
   --like-btn-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+
+  // Footer
+
+  --footer-input-border-color: #9e9da8;
+  --footer-heading-text-color: #9e9da8;
+
+  @include abstracts.screen(lg) {
+    --footer-bg-color: var(--header-bg-color);
+  }
+
+  --footer-social-icon-color: brightness(0) saturate(100%) invert(64%) sepia(7%) saturate(338%) hue-rotate(206deg)
+    brightness(97%) contrast(88%);
 }
