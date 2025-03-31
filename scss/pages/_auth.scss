@@ -1,0 +1,265 @@
+@use "../abstracts";
+
+.auth {
+  display: flex;
+  min-height: 100vh;
+
+  &__intro,
+  &__content {
+    flex: 1;
+    padding: 30px;
+
+    @include abstracts.screen(md) {
+      padding: 20px;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--auth-intro-bg-color);
+
+    &-text {
+      width: 100%;
+      max-width: 410px;
+      margin-top: 50px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 144.444%;
+      color: var(--auth-intro-text-color);
+    }
+
+    &-img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    background: var(--auth-content-bg-color);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 460px;
+
+    @include abstracts.screen(md) {
+      margin: 20px auto;
+    }
+  }
+
+  &__heading {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 146.667%;
+
+    @include abstracts.screen(md) {
+      margin-top: 30px;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 146.667%;
+    text-align: center;
+    color: #9e9da8;
+
+    &--bottom {
+      margin-top: 60px;
+
+      @include abstracts.screen(md) {
+        font-size: 1.4rem;
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: 60px;
+
+    @include abstracts.screen(md) {
+      margin-top: 30px;
+    }
+  }
+
+  &__link {
+    color: #0071dc;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  &__btn-group {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include abstracts.screen(md) {
+      margin-top: 28px;
+    }
+  }
+}
+
+.form {
+  &:has(:invalid) &__submit-btn {
+    color: #d2d1d6;
+    background-color: #f6f6f6;
+    pointer-events: none;
+    border: none;
+  }
+  &__group {
+    margin-bottom: 16px;
+  }
+
+  &__text-input {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    height: 50px;
+    border: 1px solid #d2d1d6;
+    border-radius: 10px;
+
+    &:hover {
+      border-color: #76dae6;
+    }
+  }
+
+  &__input {
+    height: 100%;
+    flex: 1;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    &::placeholder {
+      color: #d2d1d6;
+    }
+
+    &-icon {
+      margin-left: 12px;
+      width: 24px;
+      height: 24px;
+
+      &--error {
+        width: 20px;
+        height: 20px;
+        display: none;
+      }
+    }
+  }
+
+  &__group:has(:invalid):has(&__input:not(:placeholder-shown)):has(&__input:not(:focus-within)) {
+    .form__text-input {
+      border-color: var(--error-border-color);
+      background-color: rgba(var(--error-bg-color), 0.05);
+    }
+
+    .form__error-message {
+      display: block;
+    }
+
+    .form__input-icon--error {
+      display: block;
+      animation: shake 0.7s;
+    }
+
+    .form__input-icon {
+      display: none;
+    }
+  }
+
+  &__error-message {
+    margin-top: 10px;
+    color: var(--error-text-color);
+    font-size: 1.4rem;
+    display: none;
+  }
+
+  &__group-inline {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    &-label {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 146.667%;
+      padding-left: 28px;
+      color: var(--auth-checkbox-label-color);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    // Square
+    &::before {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #d2d1d6;
+      border-radius: 5px;
+    }
+
+    // Checked Icon
+    &::after {
+      display: none;
+      top: 3px;
+      left: 3px;
+      width: 16px;
+      height: 16px;
+      background-image: url(../icons/checked.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(204deg) brightness(104%)
+        contrast(101%);
+    }
+  }
+
+  &__checkbox:has(:checked) {
+    &::before {
+      background-color: #76dae6;
+      border-color: #76dae6;
+    }
+
+    &::after {
+      display: block;
+    }
+
+    .form__checkbox-label {
+      color: var(--auth-checkbox-label-color-checked);
+    }
+  }
+
+  &__align-right {
+    margin-left: auto;
+  }
+}
+
+.btn {
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+}

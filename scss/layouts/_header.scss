@@ -21,12 +21,30 @@
   }
 
   @include abstracts.screen(md) {
-    justify-content: space-between;
     padding: 16px 0;
   }
 
   &__menu--icon {
     width: 24px;
+  }
+
+  &__logo {
+    @include abstracts.screen(lg) {
+      margin-left: 24px;
+    }
+
+    @include abstracts.screen(md) {
+      margin-left: 12px;
+      margin-right: auto;
+
+      &-text {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-img {
+      width: 24px;
+    }
   }
 }
 

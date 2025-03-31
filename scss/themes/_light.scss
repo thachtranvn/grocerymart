@@ -18,6 +18,12 @@ html {
 
   // Buttons
   --primary-button-text-color: #fff;
+  --outline-button-bg-color: #f6f6f6;
+
+  // Inputs
+  --error-text-color: #e13030;
+  --error-border-color: #e13030;
+  --error-bg-color: rgba(255, 48, 48, 0.05);
 
   // Dropdown
   --dropdown-bg-color: #fff;
@@ -52,6 +58,13 @@ html {
 
   --like-btn-color: #fff;
   --like-btn-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+
+  // Authentication - Sign In / Sign Up
+  --auth-intro-bg-color: #fafafd;
+  --auth-content-bg-color: #fff;
+  --auth-intro-text-color: #fff;
+  --auth-checkbox-label-color: #9e9da8;
+  --auth-checkbox-label-color-checked: #1a162e;
 
   // Footer
   --footer-bg-color: var(--header-bg-color);

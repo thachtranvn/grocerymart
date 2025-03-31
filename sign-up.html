@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up | Grocery eCommerce</title>
+    <title>Sign Up | GroceryMart</title>
 
     <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="./assets/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Grocery" />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
@@ -32,19 +23,93 @@
     <script src="./assets/js/scripts.js"></script>
   </head>
   <body>
-    <!-- Header -->
-    <header id="header"></header>
-    <script>
-      load("#header", "./templates/header.html");
-    </script>
+    <main class="auth">
+      <!-- Auth Intro -->
+      <div class="auth__intro d-md-none">
+        <img src="./assets/img/auth/auth-intro.svg" alt="" class="auth__intro-img" />
+        <span class="auth__intro-text">
+          The best of luxury brand values, high quality products, and innovative services</span
+        >
+      </div>
 
-    <!-- Main -->
-    <h1>Sign Up Page</h1>
+      <!-- Auth Content -->
+      <div class="auth__content">
+        <div class="auth__inner">
+          <!-- Logo -->
+          <a href="./" class="logo">
+            <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+            <h2 class="logo__text">grocerymart</h2>
+          </a>
 
-    <!-- Footer -->
-    <footer id="footer"></footer>
-    <script>
-      load("#footer", "./templates/footer.html");
-    </script>
+          <!-- Heading -->
+          <h1 class="auth__heading">Sign Up</h1>
+          <p class="auth__text">Let’s create your account and shop like a pro and save money.</p>
+
+          <!-- Form -->
+          <form action="./index-signed-in.html" class="form auth__form">
+            <div class="form__group">
+              <div class="form__text-input">
+                <input class="form__input" type="email" name="" placeholder="Email" id="" required />
+                <img src="./assets/icons/mail.svg" alt="" class="form__input-icon" />
+                <img src="./assets/icons/circle-warning.svg" alt="" class="form__input-icon--error" />
+              </div>
+              <p class="form__error-message">Please enter a valid email address.</p>
+            </div>
+            <div class="form__group">
+              <div class="form__text-input">
+                <input
+                  class="form__input"
+                  type="password"
+                  name=""
+                  placeholder="Password"
+                  id=""
+                  required
+                  minlength="6"
+                />
+                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                <img src="./assets/icons/circle-warning.svg" alt="" class="form__input-icon--error" />
+              </div>
+              <p class="form__error-message">Password must be at least 6 characters long.</p>
+            </div>
+            <div class="form__group">
+              <div class="form__text-input">
+                <input
+                  class="form__input"
+                  type="password"
+                  name=""
+                  placeholder="Confirm Password"
+                  id=""
+                  required
+                  minlength="6"
+                />
+                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                <img src="./assets/icons/circle-warning.svg" alt="" class="form__input-icon--error" />
+              </div>
+              <p class="form__error-message">Password must be at least 6 characters long.</p>
+            </div>
+            <div class="form__group form__group-inline">
+              <label class="form__checkbox">
+                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
+                <span class="form__checkbox-label">Set as default account</span>
+              </label>
+            </div>
+
+            <div class="form__group auth__btn-group">
+              <button class="btn btn-lg btn-primary form__btn form__submit-btn">Sign Up</button>
+              <button class="btn btn-lg btn-outline form__btn btn--no-margin">
+                <img src="./assets/icons/google.svg" alt="" class="btn__icon" />
+
+                Sign In with Google
+              </button>
+            </div>
+          </form>
+
+          <p class="auth__text auth__text--bottom">
+            Already have an account?
+            <a href="./sign-in.html" class="auth__link">Sign In</a>
+          </p>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
