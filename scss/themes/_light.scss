@@ -66,6 +66,20 @@ html {
   --auth-checkbox-label-color: #9e9da8;
   --auth-checkbox-label-color-checked: #1a162e;
 
+  // Product Page
+  --product-page-bg-color: #fff;
+
+  // Breadcrumbs
+  --breadcrumb-bg-color: #f6f6f6;
+  --breadcrumb-text-color: #9e9da8;
+  --breadcrumb-text-color-current: #1a162e;
+  --breadcrumb-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+
+  @include abstracts.screen(md) {
+    --product-page-bg-color: #fafafd;
+    --breadcrumb-bg-color: #fff;
+  }
+
   // Footer
   --footer-bg-color: var(--header-bg-color);
 

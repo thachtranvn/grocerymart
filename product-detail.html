@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GroceryMart</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Grocery" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <!-- Fonts -->
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Gordita -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="header"></header>
+    <script>
+      load("#header", "./templates/header-signed-in.html");
+    </script>
+
+    <main class="product-page">
+      <div class="container">
+        <div class="product-container">
+          <!-- Breadcrumbs -->
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link">
+                Departments
+                <img src="./assets/icons/chevron-right.svg" alt="" class="breadcrumbs__icon" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link">
+                Coffee
+                <img src="./assets/icons/chevron-right.svg" alt="" class="breadcrumbs__icon" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link">
+                Coffee Beans
+                <img src="./assets/icons/chevron-right.svg" alt="" class="breadcrumbs__icon" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"> LavAzza </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>
+      load("#footer", "./templates/footer.html");
+    </script>
+  </body>
+</html>

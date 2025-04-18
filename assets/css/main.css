@@ -1372,6 +1372,10 @@ html.dark {
   --auth-intro-text-color: #9e9da8;
   --auth-checkbox-label-color: #9e9da8;
   --auth-checkbox-label-color-checked: #fff;
+  --product-page-bg-color: #292e39;
+  --breadcrumb-bg-color: #171c28;
+  --breadcrumb-text-color-current: #fff;
+  --breadcrumb-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
   --footer-input-border-color: #9e9da8;
   --footer-heading-text-color: #9e9da8;
   --footer-social-icon-color: brightness(0) saturate(100%) invert(64%) sepia(7%) saturate(338%) hue-rotate(206deg)
@@ -1421,6 +1425,11 @@ html {
   --auth-intro-text-color: #fff;
   --auth-checkbox-label-color: #9e9da8;
   --auth-checkbox-label-color-checked: #1a162e;
+  --product-page-bg-color: #fff;
+  --breadcrumb-bg-color: #f6f6f6;
+  --breadcrumb-text-color: #9e9da8;
+  --breadcrumb-text-color-current: #1a162e;
+  --breadcrumb-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
   --footer-bg-color: var(--header-bg-color);
   --footer-heading-text-color: #5e6b81;
   --footer-input-border-color: #d2d1d6;
@@ -1440,6 +1449,12 @@ html {
 @media (max-width: 767.98px) {
   html {
     --cate-item-bg-color: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --product-page-bg-color: #fafafd;
+    --breadcrumb-bg-color: #fff;
   }
 }
 @media (max-width: 991.98px) {
@@ -2940,6 +2955,47 @@ html {
   width: 24px;
   height: 24px;
   margin-right: 10px;
+}
+
+.product-page {
+  display: flex;
+  height: 80vh;
+  background-color: var(--product-page-bg-color);
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--breadcrumb-bg-color);
+  border-radius: 10px;
+  box-shadow: var(--breadcrumb-shadow);
+  gap: 20px;
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+.breadcrumbs__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--breadcrumb-text-color);
+}
+.breadcrumbs__link--current {
+  color: var(--breadcrumb-text-color-current);
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs__link {
+    font-size: 1.4rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
