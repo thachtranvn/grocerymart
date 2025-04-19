@@ -10,7 +10,7 @@ html.dark {
   --top-act-group-shadow-color: rgba(0, 0, 0, 0.2);
   --avatar-shadow-color: rgba(0, 0, 0, 0.08);
   --header-shadow: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
-  --separate-color: #ededf6;
+  --separate-color: #505665;
 
   // Buttons
   --primary-button-text-color: #1a162e;
@@ -20,6 +20,14 @@ html.dark {
   --error-text-color: #f37272;
   --error-border-color: #f37272;
   --error-bg-color: rgba(243, 114, 114, 0.05);
+
+  // Forms
+
+  --form-tag-color: #9e9da8;
+  --form-tag-bg-color: #292e39;
+
+  --form-tag-color-hover: #fff;
+  --form-tag-bg-color-hover: #343a48;
 
   // Dropdown
   --dropdown-bg-color: #303644;
@@ -45,8 +53,6 @@ html.dark {
   // Filter Card
   --filter-bg-color: var(--dropdown-bg-color);
   --filter-shadow: var(--dropdown-shadow);
-  --filter-form-tag-color: #9e9da8;
-  --filter-form-tag-bg-color: #171c28;
 
   // Product Card
   --product-card-bg-color: #171c28;
@@ -62,14 +68,20 @@ html.dark {
   --auth-checkbox-label-color: #9e9da8;
   --auth-checkbox-label-color-checked: #fff;
 
-  // Product Page
+  // Product Detail Page
   --product-page-bg-color: #292e39;
+  --prod-info-bg-color: #171c28;
+  --thumb-border-color: #3c4358;
+  --tag-green-bg-color: rgba(103, 176, 68, 0.2);
 
   // Breadcrumbs
   --breadcrumb-bg-color: #171c28;
   --breadcrumb-text-color-current: #fff;
-
   --breadcrumb-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
+
+  // Search Bar
+  --search-bar-bg-color: #171c28;
+  --search-bar-placeholder-color: #9e9da8;
 
   // Footer
 
