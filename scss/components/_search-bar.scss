@@ -1,0 +1,29 @@
+@use "../abstracts";
+
+.search-bar {
+  margin-top: 30px;
+  height: 50px;
+  background-color: var(--search-bar-bg-color);
+  border-radius: 10px;
+
+  @include abstracts.screen(md) {
+    margin-top: 20px;
+  }
+
+  &__input {
+    padding-left: 16px;
+    flex: 1;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 140%;
+
+    &::placeholder {
+      color: var(--search-bar-placeholder-color);
+      font-weight: 400;
+    }
+  }
+
+  &__submit {
+    padding: 0 16px;
+  }
+}
