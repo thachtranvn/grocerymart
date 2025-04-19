@@ -43,3 +43,273 @@
     }
   }
 }
+
+.prod-preview {
+  padding: 0 30px;
+
+  @include abstracts.screen(lg) {
+    display: flex;
+    padding: 0;
+  }
+
+  @include abstracts.screen(md) {
+    padding: 16px;
+  }
+
+  &__list {
+    display: flex;
+    overflow: hidden;
+
+    @include abstracts.screen(lg) {
+      flex: 1;
+    }
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    padding-top: 92%;
+    flex-shrink: 0;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__thumbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 12px;
+
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      margin: 0 40px;
+    }
+
+    @include abstracts.screen(md) {
+      display: none;
+    }
+  }
+
+  &__thumb-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+
+    background-color: transparent;
+    border: 1px solid var(--thumb-border-color);
+    border-radius: 8px;
+    transition: border-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #76dae6;
+    }
+
+    &--active {
+      border-color: #76dae6;
+    }
+
+    @include abstracts.screen(lg) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.prod-info {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--prod-info-bg-color);
+  padding: 50px;
+  border-radius: 16px;
+
+  @include abstracts.screen(xxl) {
+    padding: 40px;
+  }
+
+  @include abstracts.screen(md) {
+    padding: 16px;
+  }
+
+  &__heading {
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 140%;
+
+    @include abstracts.screen(md) {
+      font-size: 2rem;
+    }
+  }
+
+  &__right-col {
+    padding-left: 30px;
+    @include abstracts.screen(xxl) {
+      padding-left: 10px;
+    }
+    @include abstracts.screen(lg) {
+      padding-left: 0;
+    }
+  }
+}
+
+.prod-prop {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+
+  @include abstracts.screen(md) {
+    margin-top: 20px;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__icon {
+    align-self: flex-start;
+    padding-top: 2px;
+  }
+
+  &__desc {
+    margin-top: 4px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &__list {
+    margin-top: 30px;
+  }
+}
+
+.prod-form {
+  margin-top: 30px;
+}
+
+.prod-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid var(--separate-color);
+  border-radius: 6px;
+  gap: 20px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    margin-right: 10px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__tax {
+    padding: 2px 8px;
+    border-radius: 4px;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: rgb(103, 176, 68);
+    background-color: var(--tag-green-bg-color);
+  }
+
+  &__total-price {
+    font-size: 2.6rem;
+    font-weight: 500;
+  }
+
+  &__cta {
+    flex: 1;
+  }
+
+  &__like-btn {
+    box-shadow: none;
+  }
+}
+
+.prod-tab {
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 -30px;
+  }
+
+  &__item {
+    padding: 0 30px;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: #9e9da8;
+
+    &--current {
+      color: inherit;
+    }
+  }
+
+  &__content-item {
+    display: none;
+    padding-top: 30px;
+
+    &--current {
+      display: block;
+    }
+  }
+}
+
+.prod-content {
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 140%;
+    margin-bottom: 30px;
+  }
+}
+
+.review-card {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+
+  &__content {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 150%;
+  }
+}
