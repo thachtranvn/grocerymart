@@ -3239,4 +3239,64 @@ html {
   box-shadow: none;
 }
 
+.prod-tab__list {
+  display: flex;
+  align-items: center;
+  margin: 0 -30px;
+}
+.prod-tab__item {
+  padding: 0 30px;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #9e9da8;
+}
+.prod-tab__item--current {
+  color: inherit;
+}
+.prod-tab__content-item {
+  display: none;
+  padding-top: 30px;
+}
+.prod-tab__content-item--current {
+  display: block;
+}
+
+.prod-content__heading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+
+.review-card {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.review-card__content {
+  display: flex;
+  gap: 20px;
+}
+.review-card__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.review-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.review-card__title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.review-card__desc {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 150%;
+}
+
 /*# sourceMappingURL=main.css.map */
