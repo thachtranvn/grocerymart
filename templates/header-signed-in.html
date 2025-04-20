@@ -2945,10 +2945,74 @@
 
         <div class="top-act__separate"></div>
 
-        <button class="top-act__btn">
-          <img src="./assets/icons/cart.svg" alt="Cart" class="icon top-act__icon" />
-          <span class="top-act__text">$65.42</span>
-        </button>
+        <div class="top-act__btn-wrap">
+          <button class="top-act__btn">
+            <img src="./assets/icons/cart.svg" alt="Cart" class="icon top-act__icon" />
+            <span class="top-act__text">$65.42</span>
+          </button>
+          <!-- Dropdown - Cart Preview -->
+          <div class="act-dropdown">
+            <div class="act-dropdown__inner">
+              <div class="act-dropdown__top">
+                <h2 class="act-dropdown__title">You have 3 items</h2>
+                <a href="#!" class="act-dropdown__view-all btn-text">View All</a>
+              </div>
+              <div class="row row-cols-3 gx-2">
+                <!-- Cart Item 1 -->
+                <div class="col">
+                  <article class="cart-item">
+                    <div class="cart-item__img-wrap">
+                      <img src="../assets/img/products/home-product-01.webp" alt="" class="cart-item__thumb" />
+                    </div>
+                    <h3 class="cart-item__title">Lavazza Coffee Blends</h3>
+                    <p class="cart-item__price">$329.00</p>
+                  </article>
+                </div>
+                <!-- Cart Item 2 -->
+                <div class="col">
+                  <article class="cart-item">
+                    <div class="cart-item__img-wrap">
+                      <img src="../assets/img/products/home-product-02.webp" alt="" class="cart-item__thumb" />
+                    </div>
+                    <h3 class="cart-item__title">Coffee Beans Espresso</h3>
+                    <p class="cart-item__price">$39.99</p>
+                  </article>
+                </div>
+                <!-- Cart Item 3 -->
+                <div class="col">
+                  <article class="cart-item">
+                    <div class="cart-item__img-wrap">
+                      <img src="../assets/img/products/home-product-03.webp" alt="" class="cart-item__thumb" />
+                    </div>
+                    <h3 class="cart-item__title">Qualità Oro Mountain</h3>
+                    <p class="cart-item__price">$47.00</p>
+                  </article>
+                </div>
+              </div>
+              <div class="act-dropdown__bottom">
+                <div class="act-dropdown__row">
+                  <span class="act-dropdown__label">Subtotal</span>
+                  <span class="act-dropdown__value">$415.99</span>
+                </div>
+                <div class="act-dropdown__row">
+                  <span class="act-dropdown__label">Taxes</span>
+                  <span class="act-dropdown__value">Free</span>
+                </div>
+                <div class="act-dropdown__row">
+                  <span class="act-dropdown__label">Delivery</span>
+                  <span class="act-dropdown__value">$10.00</span>
+                </div>
+                <div class="act-dropdown__row act-dropdown__row--bold">
+                  <span class="act-dropdown__label">Total</span>
+                  <span class="act-dropdown__value">$425.99</span>
+                </div>
+              </div>
+              <div class="act-dropdown__action">
+                <a href="#!" class="act-dropdown__checkout btn btn-primary btn-lg">Check Out</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="top-act__user">
