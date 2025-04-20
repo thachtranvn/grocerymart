@@ -3298,5 +3298,8 @@ html {
   font-weight: 300;
   line-height: 150%;
 }
+.review-card__rating {
+  margin-top: 6px;
+}
 
 /*# sourceMappingURL=main.css.map */
