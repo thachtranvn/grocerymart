@@ -1,0 +1,44 @@
+@use "../abstracts";
+.review-card {
+  padding: 30px;
+  background-color: var(--review-card-bg-color);
+  border-radius: 16px;
+  height: 100%;
+
+  &__content {
+    display: flex;
+    gap: 20px;
+
+    @include abstracts.screen(xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 150%;
+  }
+
+  &__rating {
+    margin-top: 6px;
+  }
+}

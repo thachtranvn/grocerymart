@@ -40,7 +40,6 @@
     <main class="product-page">
       <div class="container">
         <!-- Search Bar -->
-
         <div class="product-container">
           <div class="search-bar d-none d-lg-flex">
             <input type="text" placeholder="Search for item" class="search-bar__input" />
@@ -186,23 +185,141 @@
         </div>
         <!-- Product Content -->
         <div class="product-container">
-          <div class="prod-tab">
+          <div class="prod-tab js-tabs">
             <ul class="prod-tab__list">
-              <li class="prod-tab__item">Description</li>
-              <li class="prod-tab__item">Features</li>
+              <li class="prod-tab__item prod-tab__item--current">Description</li>
               <li class="prod-tab__item">Review (1128)</li>
-              <li class="prod-tab__item prod-tab__item--current">Similar</li>
+              <li class="prod-tab__item">Similar</li>
             </ul>
             <div class="prod-tab__contents">
               <!-- Description -->
-              <div class="prod-tab__content-item">Content 1 - Description</div>
-              <!-- Features -->
-              <div class="prod-tab__content-item">Content 2 - Features</div>
-              <!-- Review -->
               <div class="prod-tab__content-item prod-tab__content-item--current">
+                <div class="row">
+                  <div class="col-8 offset-2 col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
+                    <div class="text-content prod-tab__text-content">
+                      <h2>Lavazza Espresso Whole Bean Coffee, Medium Roast</h2>
+
+                      <p>
+                        Experience the authentic taste of Italian espresso with <a href="#!">Lavazza</a>. This 2.2 lb
+                        bag contains <em>100% Arabica</em> whole beans, expertly blended and medium-roasted for a rich,
+                        aromatic brew. Sourced from South America and Africa, it's perfect for your espresso machine or
+                        favourite coffee maker.
+                      </p>
+
+                      <blockquote>Florals and fruit notes with a sweet and aromatic finish.</blockquote>
+
+                      <p>
+                        <img src="./assets/img/blogs/product-intro-01.webp" alt="" />
+                        <em>A traditional recipe with the aroma of a rich and flavorful coffee</em>
+                      </p>
+
+                      <h3>Product Highlights</h3>
+                      <ul>
+                        <li><strong>Blend:</strong> 100% Arabica</li>
+                        <li><strong>Roast:</strong> Medium</li>
+                        <li><strong>Intensity:</strong> 5/10 (Delicate)</li>
+                        <li><strong>Notes:</strong> Florals and Fruit</li>
+                        <li><strong>Origin:</strong> Central and South America</li>
+                        <li><strong>Size:</strong> 2.2 lb (1kg) Whole Bean Bag</li>
+                        <li><strong>Diet Type:</strong> Kosher</li>
+                      </ul>
+
+                      <hr />
+
+                      <h3>Ingredients</h3>
+                      <p>
+                        Espresso Italiano is a <em>100% Arabica</em> blend from Central and South America with highly
+                        aromatic notes, delicious flavor and a rich body.
+                      </p>
+
+                      <hr />
+
+                      <h3>How to Brew Your Perfect Cup</h3>
+                      <p>Follow these steps for the best results:</p>
+                      <ol>
+                        <li>
+                          Grind the Lavazza Espresso Whole Bean Coffee to a suitable consistency for your coffee making
+                          machine.
+                        </li>
+                        <li>
+                          For an espresso machine, ensure the machine is clean and add the ground coffee to the
+                          portafilter.
+                        </li>
+                        <li>
+                          For a Moka Pot, fill the filter basket with the ground coffee and screw on the top chamber
+                          containing water.
+                        </li>
+                        <li>For a Drip Coffee Maker, place a coffee filter in the basket and add the ground coffee.</li>
+                        <li>
+                          For a French Press, add the ground coffee to the French Press and heat water to the
+                          appropriate temperature.
+                        </li>
+                        <li>
+                          Follow the specific instructions for your chosen coffee making machine to brew the coffee.
+                        </li>
+                        <li>Enjoy your Lavazza Espresso!</li>
+                      </ol>
+
+                      <hr />
+
+                      <h3>Coffee Details Summary</h3>
+                      <p>
+                        <img src="./assets/img/blogs/product-intro-02.webp" alt="" />
+                        <em>Brewing excellence in every cup.</em>
+                      </p>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Attribute</th>
+                            <th>Detail</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Bean Type</td>
+                            <td>100% Arabica</td>
+                          </tr>
+                          <tr>
+                            <td>Origin</td>
+                            <td>Central & South America</td>
+                          </tr>
+                          <tr>
+                            <td>Roast Level</td>
+                            <td>Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Intensity</td>
+                            <td>5/10</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <hr />
+
+                      <h3>Important Information</h3>
+                      <p>
+                        <strong>Safety Information:</strong> This product is labelled to United States standards and may
+                        differ from similar products sold elsewhere in its ingredients, labeling and allergen warnings.
+                      </p>
+                      <p>
+                        <strong>Legal Disclaimer:</strong> Statements regarding dietary supplements have not been
+                        evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease or
+                        health condition.
+                      </p>
+
+                      <p>
+                        <img src="./assets/img/blogs/product-intro-03.webp" alt="" />
+                        <em>Order Your Lavazza Espresso Today!</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Review -->
+              <div class="prod-tab__content-item">
                 <div class="prod-content">
                   <h2 class="prod-content__heading">What our customers are saying</h2>
-                  <div class="row row-cols-3">
+                  <div class="row row-cols-3 gx-xl-2 row-cols-lg-1 gy-lg-2">
                     <!-- Review Card -->
                     <div class="col">
                       <div class="review-card">
@@ -267,7 +384,7 @@
               <div class="prod-tab__content-item">
                 <div class="prod-content">
                   <h2 class="prod-content__heading">Similar items you might like</h2>
-                  <div class="row row-cols-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3">
+                  <div class="row row-cols-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-2">
                     <!-- Product Card 1 -->
                     <div class="col">
                       <article class="product-card">
@@ -395,84 +512,6 @@
                           <span class="product-card__price">$99.99</span>
                           <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
                           <span class="product-card__score">5.0</span>
-                        </div>
-                      </article>
-                    </div>
-                    <!-- Product Card 6 -->
-                    <div class="col">
-                      <article class="product-card">
-                        <div class="product-card__img-wrap">
-                          <a href="./product-detail.html">
-                            <img class="product-card__thumb" src="./assets/img/products/home-product-01.webp" alt="" />
-                          </a>
-                          <button class="like-btn product-card__like-btn">
-                            <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
-                            <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                          </button>
-                        </div>
-                        <h3 class="product-card__title">
-                          <a href="./product-detail.html">Coffee Beans - Espresso Arabica and Robusta Beans</a>
-                        </h3>
-                        <p class="product-card__brand">
-                          <a href="#!">Lavazza</a>
-                        </p>
-                        <div class="product-card__row">
-                          <span class="product-card__price">$47.00</span>
-                          <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                          <span class="product-card__score">4.3</span>
-                        </div>
-                      </article>
-                    </div>
-                    <!-- Product Card 7 -->
-                    <div class="col">
-                      <article class="product-card">
-                        <div class="product-card__img-wrap">
-                          <a href="./product-detail.html">
-                            <img class="product-card__thumb" src="./assets/img/products/home-product-02.webp" alt="" />
-                          </a>
-                          <button class="like-btn product-card__like-btn">
-                            <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
-
-                            <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                          </button>
-                        </div>
-                        <h3 class="product-card__title">
-                          <a href="./product-detail.html">Lavazza Coffee Blends - Try the Italian Espresso</a>
-                        </h3>
-                        <p class="product-card__brand">
-                          <a href="#!">Lavazza</a>
-                        </p>
-                        <div class="product-card__row">
-                          <span class="product-card__price">$53.00</span>
-                          <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                          <span class="product-card__score">3.4</span>
-                        </div>
-                      </article>
-                    </div>
-                    <!-- Product Card 8 -->
-                    <div class="col">
-                      <article class="product-card">
-                        <div class="product-card__img-wrap">
-                          <a href="./product-detail.html">
-                            <img class="product-card__thumb" src="./assets/img/products/home-product-04.webp" alt="" />
-                          </a>
-                          <button class="like-btn product-card__like-btn">
-                            <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
-
-                            <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                          </button>
-                        </div>
-                        <h3 class="product-card__title">
-                          <a href="./product-detail.html">Qualità Oro Mountain Grown - Espresso Coffee Beans</a>
-                        </h3>
-                        <p class="product-card__brand">
-                          <a href="#!">Lavazza</a>
-                        </p>
-                        <div class="product-card__row">
-                          <span class="product-card__price">$38.65</span>
-                          <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-
-                          <span class="product-card__score">4.4</span>
                         </div>
                       </article>
                     </div>
