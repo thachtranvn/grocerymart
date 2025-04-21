@@ -329,6 +329,12 @@
   &__checkout {
     min-width: 200px;
   }
+
+  &__divider {
+    height: 1px;
+    background-color: var(--separate-color);
+    margin: 20px 0;
+  }
 }
 
 .cart-item {

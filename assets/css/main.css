@@ -1775,6 +1775,11 @@ html {
 .act-dropdown__checkout {
   min-width: 200px;
 }
+.act-dropdown__divider {
+  height: 1px;
+  background-color: var(--separate-color);
+  margin: 20px 0;
+}
 
 .cart-item {
   display: flex;
