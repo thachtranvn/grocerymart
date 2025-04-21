@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | GroceryMart</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Grocery" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <!-- Fonts -->
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Gordita -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="header"></header>
+    <script>
+      load("#header", "./templates/header-signed-in.html");
+    </script>
+
+    <main class="checkout-page">
+      <div class="container">
+        <!-- Search Bar -->
+        <div class="checkout-container">
+          <div class="search-bar d-none d-lg-flex">
+            <input type="text" placeholder="Search for item" class="search-bar__input" />
+            <button class="search-bar__submit">
+              <img src="./assets/icons/search.svg" alt="" class="icon search-bar__icon" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <div class="checkout-container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link">
+                Home
+                <img src="./assets/icons/chevron-right.svg" alt="" class="breadcrumbs__icon" />
+              </a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Checkout</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Checkout -->
+        <div class="checkout-container">
+          <div class="row">
+            <!-- Left Column -->
+            <div class="col-8 col-xl-12">
+              <div class="checkout__wrap">
+                <!-- Checkout Item 1 -->
+                <article class="checkout__item">
+                  <a href="#!"
+                    ><img src="./assets/img/products/home-product-01.webp" alt="" class="checkout__thumb"
+                  /></a>
+                  <div class="checkout__item-content">
+                    <div class="checkout__item-detail">
+                      <div class="checkout__content">
+                        <a href="#!"
+                          ><h2 class="checkout__title">Coffee Beans - Espresso Arabica and Robusta Beans</h2></a
+                        >
+                        <p class="checkout__price">$329.00 <span class="checkout__item-status">(In Stock)</span></p>
+                      </div>
+                      <div class="checkout__inputs">
+                        <div class="checkout__input checkout__input--select">
+                          LavAzza
+                          <img src="./assets/icons/chevron-down.svg" alt="" class="icon checkout__input-icon" />
+                        </div>
+                        <div class="checkout__input">
+                          <img src="./assets/icons/minus.svg" alt="" class="icon checkout__input-icon" />
+                          1
+                          <img src="./assets/icons/plus.svg" alt="" class="icon checkout__input-icon" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout__item-total">
+                      <p class="checkout__total-price">$329.00</p>
+                      <div class="checkout__action">
+                        <button class="btn btn-text checkout__btn">
+                          <img src="./assets/icons/heart-2.svg" alt="" class="checkout__icon" />
+                          Save
+                        </button>
+                        <button class="btn btn-text checkout__btn">
+                          <img src="./assets/icons/trash.svg" alt="" class="checkout__icon" />
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!-- Checkout Item 2 -->
+                <article class="checkout__item">
+                  <a href="#!"
+                    ><img src="./assets/img/products/home-product-02.webp" alt="" class="checkout__thumb"
+                  /></a>
+                  <div class="checkout__item-content">
+                    <div class="checkout__item-detail">
+                      <div class="checkout__content">
+                        <a href="#!">
+                          <h2 class="checkout__title">Lavazza Coffee Blends - Try the Italian Espresso</h2>
+                        </a>
+                        <p class="checkout__price">$39.99 <span class="checkout__item-status">(In Stock)</span></p>
+                      </div>
+                      <div class="checkout__inputs">
+                        <div class="checkout__input checkout__input--select">
+                          LavAzza
+                          <img src="./assets/icons/chevron-down.svg" alt="" class="icon checkout__input-icon" />
+                        </div>
+                        <div class="checkout__input">
+                          <img src="./assets/icons/minus.svg" alt="" class="icon checkout__input-icon" />
+                          1
+                          <img src="./assets/icons/plus.svg" alt="" class="icon checkout__input-icon" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout__item-total">
+                      <p class="checkout__total-price">$39.99</p>
+                      <div class="checkout__action">
+                        <button class="btn btn-text checkout__btn">
+                          <img src="./assets/icons/heart-2.svg" alt="" class="checkout__icon" />
+                          Save
+                        </button>
+                        <button class="btn btn-text checkout__btn">
+                          <img src="./assets/icons/trash.svg" alt="" class="checkout__icon" />
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!-- Checkout Item 3 -->
+                <article class="checkout__item">
+                  <a href="#!"
+                    ><img src="./assets/img/products/home-product-03.webp" alt="" class="checkout__thumb"
+                  /></a>
+                  <div class="checkout__item-content">
+                    <div class="checkout__item-detail">
+                      <div class="checkout__content">
+                        <a href="#!"
+                          ><h2 class="checkout__title">Qualità Oro Mountain Grown - Espresso Coffee Beans</h2></a
+                        >
+                        <p class="checkout__price">$47.00 <span class="checkout__item-status">(In Stock)</span></p>
+                      </div>
+                      <div class="checkout__inputs">
+                        <div class="checkout__input checkout__input--select">
+                          LavAzza
+                          <img src="./assets/icons/chevron-down.svg" alt="" class="icon checkout__input-icon" />
+                        </div>
+                        <div class="checkout__input">
+                          <img src="./assets/icons/minus.svg" alt="" class="icon checkout__input-icon" />
+                          1
+                          <img src="./assets/icons/plus.svg" alt="" class="icon checkout__input-icon" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout__item-total">
+                      <p class="checkout__total-price">$47.00</p>
+                      <div class="checkout__action">
+                        <button class="btn btn-text checkout__btn">
+                          <img src="./assets/icons/heart-2.svg" alt="" class="checkout__icon" />
+                          Save
+                        </button>
+                        <button class="btn btn-text checkout__btn">
+                          <img src="./assets/icons/trash.svg" alt="" class="checkout__icon" />
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <div class="checkout__back-btn--wrap">
+                  <button class="checkout__back-btn btn btn-text">
+                    <img src="./assets/icons/chevron-left.svg" alt="" class="icon checkout__icon" />
+                    Back to Shopping
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-4 col-xl-12">
+              <div class="checkout__wrap">
+                <div class="checkout-pricing">
+                  <div class="checkout-pricing__row">
+                    <span class="checkout-pricing__label">Subtotal</span>
+                    <span class="checkout-pricing__value">$415.99</span>
+                  </div>
+                  <div class="checkout-pricing__row">
+                    <span class="checkout-pricing__label">Taxes</span>
+                    <span class="checkout-pricing__value">Free</span>
+                  </div>
+                  <div class="checkout-pricing__row">
+                    <span class="checkout-pricing__label">Delivery</span>
+                    <span class="checkout-pricing__value">$10.00</span>
+                  </div>
+                  <div class="checkout-pricing__row checkout-pricing__row--bold">
+                    <span class="checkout-pricing__label">Total</span>
+                    <span class="checkout-pricing__value">$425.99</span>
+                  </div>
+                  <div class="checkout-pricing__btn btn btn-primary btn-lg">Continue</div>
+                </div>
+              </div>
+              <div class="checkout__wrap">
+                <a href="#!">
+                  <div class="checkout-promo">
+                    <img src="./assets/img/others/gift.svg" alt="" class="checkout-promo__img" />
+                    <div class="checkout-promo__content">
+                      <h2 class="checkout-promo__title">Send this order as a gift.</h2>
+                      <p class="checkout-promo__desc">Available items will be shipped to your gift recipient.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>
+      load("#footer", "./templates/footer.html");
+    </script>
+  </body>
+</html>

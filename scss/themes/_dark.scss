@@ -38,6 +38,9 @@ html.dark {
   --menu-icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg)
     brightness(103%) contrast(101%);
 
+  // Card Pattern
+  --card-bg-color: #171c28;
+
   // Sidebar
   --sidebar-bg-color: #303644;
   --sidebar-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
@@ -82,6 +85,9 @@ html.dark {
   // Search Bar
   --search-bar-bg-color: #171c28;
   --search-bar-placeholder-color: #9e9da8;
+
+  // Checkout
+  --checkout-promo-illus-bg-color: rgba(118, 68, 225, 0.2);
 
   // Footer
 
